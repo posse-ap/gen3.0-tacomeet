@@ -89,9 +89,12 @@ img {
   right: 16px;
   width: 288px;
   height: 80px;
-  background-color: #5FDF5B;
+  background-color: #5fdf5b;
   align-items: center;
   border-radius: 16px;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.15);
+  /* a tagにつけないと */
+  text-decoration: none;
   z-index: 2;
 }
 .line-cta .line-logo {
@@ -109,7 +112,6 @@ img {
   margin: 9px;
   height: 18px;
 }
-
 
 /* main */
 .main {

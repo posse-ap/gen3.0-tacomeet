@@ -26,6 +26,7 @@ html {
   font-weight: 700;
 }
 /* これってあり？divで包んでwidthとか設定した方が良いって言われた */
+/* なんでdivで囲んだ方がいいの？ */
 img {
   width: 100%;
 }
@@ -77,6 +78,37 @@ img {
 .icon-sns--instagram {
   width: 24px;
 }
+
+/* line-cta */
+.line-cta {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  bottom: 16px;
+  right: 16px;
+  width: 288px;
+  height: 80px;
+  background-color: #5FDF5B;
+  align-items: center;
+  border-radius: 16px;
+  z-index: 2;
+}
+.line-cta .line-logo {
+  display: inline-block;
+  width: 36px;
+}
+.line-cta .text {
+  display: inline-block;
+  font-size: 14px;
+  color: #fff;
+}
+.line-cta .link-img {
+  display: inline-block;
+  width: 18px;
+  margin: 9px;
+  height: 18px;
+}
+
 
 /* main */
 .main {

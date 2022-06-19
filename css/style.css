@@ -25,6 +25,10 @@ html {
   font-family: "Noto Sans JP";
   font-weight: 700;
 }
+/* これってあり？divで包んでwidthとか設定した方が良いって言われた */
+img {
+  width: 100%;
+}
 
 /* header */
 
@@ -64,6 +68,12 @@ html {
   border-radius: 50px;
   justify-content: center;
 }
+.icon-sns--twitter {
+  width: 25px;
+}
+.icon-sns--instagram {
+  width: 24px;
+}
 
 /* main */
 /* top */
@@ -98,6 +108,8 @@ html {
 .top .key-visual {
   display: inline-block;
   position: absolute;
+  width: 976px;
+  height: 680px;
   right: 0;
 }
 .top .key-visual img {
@@ -146,6 +158,8 @@ html {
 }
 .about .description img {
   border-radius: 24px;
+  width: 472px;
+  height: 312px;
 }
 .about .description .text {
   display: flex;
@@ -170,6 +184,8 @@ html {
   position: absolute;
   top: 0px;
   left: 0px;
+  width: 984px;
+  height: 357px;
   border-radius: 48px;
   z-index: -1;
 }
@@ -185,6 +201,8 @@ html {
   position: absolute;
   top: 81px;
   left: 327px;
+  width: 40px;
+  height: 40px;
 }
 .line .description {
   position: absolute;
@@ -222,6 +240,8 @@ html {
   position: absolute;
   top: 18px;
   right: 19px;
+  width: 14px;
+  height: 14px;
   display: inline-block;
 }
 
@@ -251,8 +271,9 @@ html {
   margin-left: 4px;
   background-image: url("../assets/img/icon/icon-link-gray-dark.svg");
   background-size: contain;
-  /* vertical-align: baseline; */
+  /* todo: 真ん中に表示されていない気がする */
   vertical-align: middle;
+  /* vertical-align: baseline; */
 }
 .footer .sns-list {
   margin: 32px 8px 48px;

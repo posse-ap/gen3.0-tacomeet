@@ -5,11 +5,14 @@
 
 ## todo
 - [] logo in a tag
+- [] sass
+- [] BEM記法
 
 ## try
 
 - ロゴhoverを色付き画像にする
 - scroll downした時にアニメーションをつける
+- marginだけじゃなくてpadding使う
 
 
 ## feedback
@@ -18,3 +21,24 @@
 - imgタグのwidthとかもcssで設定した方が良い
 
 - imgタグはdivタグで
+
+
+## シンハ対策
+
+- チームここまでできたら何点
+- 応用は個人で何点
+
+- 難しいcssとか？
+- animation
+- レスポンシブ 
+- position relative, absolute
+- 擬似要素 (hover, before, after)
+
+
+もしかしたら...
+- grid, 要素の横並び
+- 3Dアニメーション（ルービックキューブ）
+
+### 採点
+- 見た目からだけどコード見られることもある
+- 

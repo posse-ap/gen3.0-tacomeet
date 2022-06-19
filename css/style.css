@@ -33,11 +33,14 @@ img {
 /* header */
 
 .header {
+  display: flex;
+  position: fixed;
   width: 100%;
   height: 80px;
-  display: flex;
   justify-content: space-between;
   align-items: center;
+  /* z-indexってどうやって管理するのがいいの？ */
+  z-index: 2;
 }
 .header .logo {
   margin-left: 24px;
@@ -76,6 +79,10 @@ img {
 }
 
 /* main */
+.main {
+  /* margin-topにするとheaderにもmarginがかかったみたいになっちゃう */
+  padding-top: 80px;
+}
 /* top */
 .top {
   position: relative;

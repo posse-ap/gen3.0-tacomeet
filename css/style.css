@@ -25,8 +25,8 @@ html {
   font-family: "Noto Sans JP";
   font-weight: 700;
 }
-/* これってあり？divで包んでwidthとか設定した方が良いって言われた */
-/* なんでdivで囲んだ方がいいの？ */
+/* todo: これってあり？divで包んでwidthとか設定した方が良いって言われた */
+/* todo: なんでdivで囲んだ方がいいの？ */
 img {
   width: 100%;
 }
@@ -41,12 +41,16 @@ img {
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
-  /* z-indexってどうやって管理するのがいいの？ */
+  /* todo: z-indexってどうやって管理するのがいいの？ */
   z-index: 2;
 }
 .header .logo {
   margin-left: 24px;
-  margin-top: 26px;
+}
+.header .logo img {
+  /* todo: .logoにwidthとheightをかけるとh1タグとimgタグがずれる */
+  width: 148px;
+  height: 27.53px;
 }
 .global-nav {
   display: flex;
@@ -93,7 +97,7 @@ img {
   align-items: center;
   border-radius: 16px;
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.15);
-  /* a tagにつけないと */
+  /* a tagにつけないといけない */
   text-decoration: none;
   z-index: 2;
 }

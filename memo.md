@@ -14,17 +14,20 @@
 - scroll downした時にアニメーションをつける
 - marginだけじゃなくてpadding使う
 - レスポンシブ
+- sass
 
 
 ## feedback
 
 ### Naoki-san
 - imgタグのwidthとかもcssで設定した方が良い
+- imgタグはdivタグで囲んであげる
 
-- imgタグはdivタグで
+### Kazuki-san
+- flex boxは幅だけ見るから、space-aroundとかは要素のサイズだけ調節してあげれば均等に並ぶ（divで画像を囲んでいる時とかは、marginで調節してあげる）
 
 ### tomoaki-san
-- position使いがち 
+- position使いがち (topのテキスト部分はabsolute使わなくてもいけるかも)
 - %とか使ってあげた方が良い（rem, em）
 - header分 main をずらす方法はposition: absolute使った方が良いかも
 - reset.css使ってもいいかも

@@ -1,0 +1,19 @@
+@use "../foundation/variables" as *;
+
+$header-height: 80px;
+$header-height-mobile: 56px;
+
+.l-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $header-height;
+
+  padding: 0 24px;
+
+  @include mobile {
+    padding: 0 16px;
+    height: $header-height-mobile;
+  }
+}

@@ -1,0 +1,9 @@
+@use "../foundation/variables" as *;
+
+.l-line {
+  margin: 0 16% 81px;
+
+  @include mobile {
+    margin: 0 4% 72px;
+  }
+}

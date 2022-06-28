@@ -1,0 +1,41 @@
+@use "../../foundation/variables" as *;
+
+.p-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color-light;
+
+  &__logo {
+    display: inline-block;
+    width: 148px;
+
+    @include mobile {
+      width: 120px;
+    }
+  }
+
+  &__nav {
+    &__list {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      gap: 32px;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    &__item {
+      color: $color-gray-dark;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+
+      &:hover {
+        color: $color-gray-dark;
+      }
+    }
+  }
+}

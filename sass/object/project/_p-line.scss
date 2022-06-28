@@ -1,0 +1,103 @@
+@use "../../foundation/variables" as *;
+
+.p-line {
+  position: relative;
+  
+  padding: 68px 0;
+  
+  border-radius: 48px;
+  overflow: hidden;
+  background-image: url("../assets/img/bg-line.jpg");
+  background-size: cover;
+
+  @include mobile {
+    padding: 42px 24px;
+  }
+  
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    
+    width: 100%;
+    height: 100%;
+    
+    background-color: rgba($color-primary, 0.9);
+  }
+  
+  &--wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    gap: 16px;
+  }
+
+  &--title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 36px;
+    line-height: 1.8;
+
+    @include mobile {
+      flex-direction: column;
+      gap: 4px;
+
+      font-size: 24px;
+    }
+
+    &--text {
+      color: $color-light;
+    }
+  }
+
+  &--content {
+    text-align: center;
+
+    color: $color-light;
+    font-size: 14px;
+    line-height: 1.6;
+    letter-spacing: 0.1em;
+
+    @include mobile {
+      text-align: left;
+    }
+  }
+
+  &--link {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 320px;
+    height: 50px;
+
+    margin: 0 auto;
+
+    border-radius: 98px;
+    background-color: $color-light;
+
+    color: $color-gray-dark;
+    font-size: 14px;
+    line-height: 1.6;
+    letter-spacing: 0.1em;
+
+    @include mobile {
+      width: 295px;
+    }
+
+    .u-icon__link {
+      position: absolute;
+      right: 19px;
+
+      @include mobile {
+        right: 18px;
+      }
+    }
+  }
+}

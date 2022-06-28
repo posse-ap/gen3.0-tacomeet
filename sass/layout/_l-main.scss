@@ -1,0 +1,11 @@
+@use "../foundation/variables" as *;
+@use "l-header" as *;
+
+.l-main {
+  margin-top: $header-height;
+  // question: mobileの時に高さわからなかったら無理じゃね？
+
+  @include mobile {
+    margin-top: $header-height-mobile;
+  }
+}

@@ -1,0 +1,26 @@
+// base
+@use "foundation/reset";
+@use "foundation/base";
+@use "foundation/fonts";
+
+// layout
+@use "layout/l-header";
+@use "layout/l-footer";
+@use "layout/l-line";
+
+@use "layout/l-main";
+@use "layout/l-quiz-hero";
+@use "layout/l-quiz-main";
+
+// project
+@use "object/project/p-header";
+@use "object/project/p-footer";
+@use "object/project/p-line";
+
+@use "object/project/p-quiz-hero";
+@use "object/project/p-quiz-main";
+
+// utility
+@use "object/utility/u-font";
+@use "object/utility/u-icon";
+@use "object/project/p-sns";

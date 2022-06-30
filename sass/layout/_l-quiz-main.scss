@@ -1,9 +1,0 @@
-@use "../foundation/variables" as *;
-
-.l-quiz-main {
-  padding: 120px 228px 140px;
-
-  @include mobile {
-    padding: 48px 17px 120px 15px;
-  }
-}

@@ -1,18 +1,23 @@
 @use "../../foundation/variables" as *;
+@use "../../foundation/mixin" as *;
 
 .p-quiz-hero {
   display: flex;
   flex-direction: column;
   gap: 12px;
+
+  padding: 110px 0 76px 204px;
+
   background-image: url("../assets/img/quiz/bg-hero.jpg");
   background-size: cover;
-  
+
   @include mobile {
     gap: 0;
+
+    padding: 60px 0 32px 32px;
     // todo: i think the image itself is different for mobile
   }
   &__caption {
-    
     font-size: 18px;
     color: $color-primary-light;
     line-height: 1.8;

@@ -3,10 +3,10 @@
 
 .p-line {
   position: relative;
-  
+
   margin: 0 16% 102px;
   padding: 68px 0;
-  
+
   border-radius: 48px;
   overflow: hidden;
   background-image: url("../assets/img/bg-line.jpg");
@@ -15,26 +15,27 @@
   @include mobile {
     margin: 0 4% 72px;
     padding: 42px 24px;
+
+    border-radius: 24px;
   }
-  
+
   &::before {
     content: "";
     position: absolute;
     left: 0;
     top: 0;
-    
+
     width: 100%;
     height: 100%;
-    
+
     background-color: rgba($color-primary, 0.9);
   }
-  
+
   &__wrapper {
     position: relative;
     display: flex;
     flex-direction: column;
     // justify-content: center;
-    gap: 16px;
   }
 
   &__title {
@@ -59,6 +60,7 @@
   }
 
   &__content {
+    margin-top: 16px;
     text-align: center;
 
     color: $color-light;
@@ -67,6 +69,7 @@
     letter-spacing: 0.1em;
 
     @include mobile {
+      margin-top: 8px;
       text-align: left;
     }
   }
@@ -80,7 +83,7 @@
     width: 320px;
     height: 50px;
 
-    margin: 0 auto;
+    margin: 24px auto 0;
 
     border-radius: 98px;
     background-color: $color-light;

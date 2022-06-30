@@ -9,6 +9,8 @@
 @use "layout/l-main";
 
 // project
+@use "object/project/p-sns";
+
 @use "object/project/p-header";
 @use "object/project/p-footer";
 @use "object/project/p-line";
@@ -19,4 +21,3 @@
 // utility
 @use "object/utility/u-font";
 @use "object/utility/u-icon";
-@use "object/project/p-sns";

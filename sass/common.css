@@ -447,7 +447,6 @@ i,
 }
 .p-quiz-main__answer__choice-item__text {
   display: inline-block;
-  width: 240px;
   text-align: left;
   font-size: 18px;
   font-weight: bold;

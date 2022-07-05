@@ -479,7 +479,7 @@ i,
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding: 24px;
+  padding: 24px 40px;
   border-radius: 8px;
 }
 .p-quiz-main__choice__answer.is-correct {

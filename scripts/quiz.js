@@ -46,7 +46,7 @@
       text: "約5倍",
     },
   ];
-  const CORRECT_TITLE = "正解!";
+  const CORRECT_TITLE = "正解！";
   const INCORRECT_TITLE = "不正解...";
   const CORRECT_CLASS = "is-correct";
   const INCORRECT_CLASS = "is-incorrect";

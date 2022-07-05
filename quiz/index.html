@@ -14,6 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Plus+Jakarta+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <script src="../scripts/quiz.js" defer></script>
   </head>
   <body>
     <header class="l-header p-header">
@@ -47,7 +48,7 @@
         <h1 class="p-quiz-hero__heading">ITクイズ</h1>
       </section>
       <section class="p-quiz-main">
-        <section class="p-quiz-main__content">
+        <section class="p-quiz-main__content js-quiz">
           <div class="p-quiz-main__question">
             <h2 class="u-en p-quiz-main__question__id">Q1</h2>
 
@@ -61,31 +62,28 @@
           <div class="p-quiz-main__choice">
             <h2 class="u-en p-quiz-main__choice__id">A</h2>
             <div class="p-quiz-main__choice__list">
-              <button class="p-quiz-main__choice__item">
+              <button class="p-quiz-main__choice__item js-choice">
                 <span class="p-quiz-main__choice__item__text">約28万人</span
                 ><i class="u-icon__arrow"></i>
               </button>
-              <button class="p-quiz-main__choice__item">
+              <button class="p-quiz-main__choice__item js-choice">
                 <span class="p-quiz-main__choice__item__text">約79万人</span
                 ><i class="u-icon__arrow"></i>
               </button>
-              <button class="p-quiz-main__choice__item">
+              <button class="p-quiz-main__choice__item js-choice">
                 <span class="p-quiz-main__choice__item__text">約183万人</span
                 ><i class="u-icon__arrow"></i>
               </button>
             </div>
-            <div class="p-quiz-main__choice__answer correct">
-              <span class="p-quiz-main__choice__answer__title correct">正解！</span>
+            <div class="p-quiz-main__choice__answer js-answer u-state__hidden">
+              <span
+                class="p-quiz-main__choice__answer__title js-answerTitle"
+              ></span>
               <div class="p-quiz-main__choice__answer__wrapper">
                 <span class="p-quiz-main__choice__answer__id u-en">A</span
-                ><span class="p-quiz-main__choice__answer__text">約28万人</span>
-              </div>
-            </div>
-            <div class="p-quiz-main__choice__answer incorrect">
-              <span class="p-quiz-main__choice__answer__title incorrect">不正解...</span>
-              <div class="p-quiz-main__choice__answer__wrapper">
-                <span class="p-quiz-main__choice__answer__id u-en">A</span
-                ><span class="p-quiz-main__choice__answer__text">約28万人</span>
+                ><span
+                  class="p-quiz-main__choice__answer__text js-answerText"
+                ></span>
               </div>
             </div>
             <div class="p-quiz-main__choice__reference">
@@ -96,7 +94,7 @@
             </div>
           </div>
         </section>
-        <section class="p-quiz-main__content">
+        <section class="p-quiz-main__content js-quiz">
           <div class="p-quiz-main__question">
             <h2 class="u-en p-quiz-main__question__id">Q2</h2>
 
@@ -111,26 +109,35 @@
           <div class="p-quiz-main__choice">
             <h2 class="u-en p-quiz-main__choice__id">A</h2>
             <div class="p-quiz-main__choice__list">
-              <button class="p-quiz-main__choice__item">
+              <button class="p-quiz-main__choice__item js-choice">
                 <span class="p-quiz-main__choice__item__text">INTECH</span
                 ><i class="u-icon__arrow"></i>
               </button>
-              <button class="p-quiz-main__choice__item">
+              <button class="p-quiz-main__choice__item js-choice">
                 <span class="p-quiz-main__choice__item__text">BIZZTECH</span
                 ><i class="u-icon__arrow"></i>
               </button>
-              <!-- question -->
-              <button class="p-quiz-main__choice__item">
+              <button class="p-quiz-main__choice__item js-choice">
                 <span class="p-quiz-main__choice__item__text"></span
                 ><i class="u-icon__arrow"></i>
               </button>
             </div>
+            <div class="p-quiz-main__choice__answer js-answer u-state__hidden">
+              <span
+                class="p-quiz-main__choice__answer__title js-answerTitle"
+              ></span>
+              <div class="p-quiz-main__choice__answer__wrapper">
+                <span class="p-quiz-main__choice__answer__id u-en">A</span
+                ><span
+                  class="p-quiz-main__choice__answer__text js-answerText"
+                ></span>
+              </div>
+            </div>
           </div>
         </section>
-        <section class="p-quiz-main__content">
+        <section class="p-quiz-main__content js-quiz">
           <div class="p-quiz-main__question">
             <h2 class="u-en p-quiz-main__question__id">Q3</h2>
-
             <div class="p-quiz-main__question__text">
               IoTとは何の略でしょう？
             </div>
@@ -141,25 +148,36 @@
           <div class="p-quiz-main__choice">
             <h2 class="u-en p-quiz-main__choice__id">A</h2>
             <div class="p-quiz-main__choice__list">
-              <button class="p-quiz-main__choice__item">
+              <button class="p-quiz-main__choice__item js-choice">
                 <span class="p-quiz-main__choice__item__text"
                   >Internet of Things</span
                 ><i class="u-icon__arrow"></i>
               </button>
-              <button class="p-quiz-main__choice__item">
+              <button class="p-quiz-main__choice__item js-choice">
                 <span class="p-quiz-main__choice__item__text"
                   >Integrate into Technology</span
                 ><i class="u-icon__arrow"></i>
               </button>
-              <button class="p-quiz-main__choice__item">
+              <button class="p-quiz-main__choice__item js-choice">
                 <span class="p-quiz-main__choice__item__text"
                   >Information on Tool</span
                 ><i class="u-icon__arrow"></i>
               </button>
             </div>
+            <div class="p-quiz-main__choice__answer js-answer u-state__hidden">
+              <span
+                class="p-quiz-main__choice__answer__title js-answerTitle"
+              ></span>
+              <div class="p-quiz-main__choice__answer__wrapper">
+                <span class="p-quiz-main__choice__answer__id u-en">A</span
+                ><span
+                  class="p-quiz-main__choice__answer__text js-answerText"
+                ></span>
+              </div>
+            </div>
           </div>
         </section>
-        <section class="p-quiz-main__content">
+        <section class="p-quiz-main__content js-quiz">
           <div class="p-quiz-main__question">
             <h2 class="u-en p-quiz-main__question__id">Q4</h2>
 
@@ -173,18 +191,29 @@
           <div class="p-quiz-main__choice">
             <h2 class="u-en p-quiz-main__choice__id">A</h2>
             <div class="p-quiz-main__choice__list">
-              <button class="p-quiz-main__choice__item">
+              <button class="p-quiz-main__choice__item js-choice">
                 <span class="p-quiz-main__choice__item__text">Society 5.0</span
                 ><i class="u-icon__arrow"></i>
               </button>
-              <button class="p-quiz-main__choice__item">
+              <button class="p-quiz-main__choice__item js-choice">
                 <span class="p-quiz-main__choice__item__text">CyPhy</span
                 ><i class="u-icon__arrow"></i>
               </button>
-              <button class="p-quiz-main__choice__item">
+              <button class="p-quiz-main__choice__item js-choice">
                 <span class="p-quiz-main__choice__item__text">SDGs</span
                 ><i class="u-icon__arrow"></i>
               </button>
+            </div>
+            <div class="p-quiz-main__choice__answer js-answer u-state__hidden">
+              <span
+                class="p-quiz-main__choice__answer__title js-answerTitle"
+              ></span>
+              <div class="p-quiz-main__choice__answer__wrapper">
+                <span class="p-quiz-main__choice__answer__id u-en">A</span
+                ><span
+                  class="p-quiz-main__choice__answer__text js-answerText"
+                ></span>
+              </div>
             </div>
             <div class="p-quiz-main__choice__reference">
               <i class="u-icon__note"></i
@@ -194,10 +223,9 @@
             </div>
           </div>
         </section>
-        <section class="p-quiz-main__content">
+        <section class="p-quiz-main__content js-quiz">
           <div class="p-quiz-main__question">
             <h2 class="u-en p-quiz-main__question__id">Q5</h2>
-
             <div class="p-quiz-main__question__text">
               イギリスのコンピューター科学者であるギャビン・ウッド氏が提唱した、ブロックチェーン技術を活用した「次世代分散型インターネット」のことをなんと言うでしょう？
             </div>
@@ -208,25 +236,35 @@
           <div class="p-quiz-main__choice">
             <h2 class="u-en p-quiz-main__choice__id">A</h2>
             <div class="p-quiz-main__choice__list">
-              <button class="p-quiz-main__choice__item">
+              <button class="p-quiz-main__choice__item js-choice">
                 <span class="p-quiz-main__choice__item__text">Web3.0</span
                 ><i class="u-icon__arrow"></i>
               </button>
-              <button class="p-quiz-main__choice__item">
+              <button class="p-quiz-main__choice__item js-choice">
                 <span class="p-quiz-main__choice__item__text">NFT</span
                 ><i class="u-icon__arrow"></i>
               </button>
-              <button class="p-quiz-main__choice__item">
+              <button class="p-quiz-main__choice__item js-choice">
                 <span class="p-quiz-main__choice__item__text">メタバース</span
                 ><i class="u-icon__arrow"></i>
               </button>
             </div>
+            <div class="p-quiz-main__choice__answer js-answer u-state__hidden">
+              <span
+                class="p-quiz-main__choice__answer__title js-answerTitle"
+              ></span>
+              <div class="p-quiz-main__choice__answer__wrapper">
+                <span class="p-quiz-main__choice__answer__id u-en">A</span
+                ><span
+                  class="p-quiz-main__choice__answer__text js-answerText"
+                ></span>
+              </div>
+            </div>
           </div>
         </section>
-        <section class="p-quiz-main__content">
+        <section class="p-quiz-main__content js-quiz">
           <div class="p-quiz-main__question">
             <h2 class="u-en p-quiz-main__question__id">Q6</h2>
-
             <div class="p-quiz-main__question__text">
               先進テクノロジー活用企業と出遅れた企業の収益性の差はどれくらいあると言われているでしょうか？
             </div>
@@ -237,18 +275,29 @@
           <div class="p-quiz-main__choice">
             <h2 class="u-en p-quiz-main__choice__id">A</h2>
             <div class="p-quiz-main__choice__list">
-              <button class="p-quiz-main__choice__item">
+              <button class="p-quiz-main__choice__item js-choice">
                 <span class="p-quiz-main__choice__item__text">約2倍</span
                 ><i class="u-icon__arrow"></i>
               </button>
-              <button class="p-quiz-main__choice__item">
+              <button class="p-quiz-main__choice__item js-choice">
                 <span class="p-quiz-main__choice__item__text">約5倍</span
                 ><i class="u-icon__arrow"></i>
               </button>
-              <button class="p-quiz-main__choice__item">
+              <button class="p-quiz-main__choice__item js-choice">
                 <span class="p-quiz-main__choice__item__text">約11倍</span
                 ><i class="u-icon__arrow"></i>
               </button>
+            </div>
+            <div class="p-quiz-main__choice__answer js-answer u-state__hidden">
+              <span
+                class="p-quiz-main__choice__answer__title js-answerTitle"
+              ></span>
+              <div class="p-quiz-main__choice__answer__wrapper">
+                <span class="p-quiz-main__choice__answer__id u-en">A</span
+                ><span
+                  class="p-quiz-main__choice__answer__text js-answerText"
+                ></span>
+              </div>
             </div>
             <div class="p-quiz-main__choice__reference">
               <i class="u-icon__note"></i

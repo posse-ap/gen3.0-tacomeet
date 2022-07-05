@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="../sass/common.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Plus+Jakarta+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="l-header p-header">
+      <a href="#" class="l-header__logo p-header__logo">
+        <img src="../assets/img/logo.svg" alt="POSSE" />
+      </a>
+      <nav class="p-header__nav">
+        <ul class="l-header__nav__list p-header__nav__list">
+          <li class="p-header__nav__item">POSSEとは</li>
+          <li class="p-header__nav__item">クイズ</li>
+          <li class="p-header__nav__item">
+            <ul class="p-sns p-header__sns__list">
+              <li class="p-sns__item">
+                <a href="#" class="p-sns__item__link"
+                  ><i class="u-icon__twitter"></i
+                ></a>
+              </li>
+              <li class="p-sns__item">
+                <a href="#" class="p-sns__item__link"
+                  ><i class="u-icon__instagram"></i
+                ></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="l-main">
+      <section class="p-quiz-hero">
+        <span class="p-quiz-hero__caption">POSSE課題</span>
+        <h1 class="p-quiz-hero__heading">ITクイズ</h1>
+      </section>
+      <section class="p-quiz-main">
+        <section class="p-quiz-main__content">
+          <div class="p-quiz-main__question">
+            <h2 class="u-en p-quiz-main__question__id">Q1</h2>
+
+            <div class="p-quiz-main__question__text">
+              日本のIT人材が2030年には最大どれくらい不足すると言われているでしょうか？
+            </div>
+          </div>
+          <picture class="p-quiz-main__image">
+            <img src="../assets/img/quiz/img-quiz01.png" alt="population" />
+          </picture>
+          <div class="p-quiz-main__answer">
+            <h2 class="u-en p-quiz-main__answer__id">A</h2>
+            <div class="p-quiz-main__answer__choice-list">
+              <button class="p-quiz-main__answer__choice-item">
+                <span class="p-quiz-main__answer__choice-item__text"
+                  >約28万人</span
+                ><i class="u-icon__arrow"></i>
+              </button>
+              <button class="p-quiz-main__answer__choice-item">
+                <span class="p-quiz-main__answer__choice-item__text"
+                  >約79万人</span
+                ><i class="u-icon__arrow"></i>
+              </button>
+              <button class="p-quiz-main__answer__choice-item">
+                <span class="p-quiz-main__answer__choice-item__text"
+                  >約183万人</span
+                ><i class="u-icon__arrow"></i>
+              </button>
+            </div>
+            <!-- blockquoteではなくね？ -->
+            <div class="p-quiz-main__answer__reference">
+              <i class="u-icon__note"></i
+              ><cite class="p-quiz-main__answer__reference__text">
+                経済産業省 2019年3月 － IT 人材需給に関する調査
+              </cite>
+            </div>
+          </div>
+        </section>
+        <section class="p-quiz-main__content">
+          <div class="p-quiz-main__question">
+            <h2 class="u-en p-quiz-main__question__id">Q2</h2>
+
+            <div class="p-quiz-main__question__text">
+              既存業界のビジネスと、先進的なテクノロジーを結びつけて生まれた、新しいビジネスのことをなんと言うでしょう？
+            </div>
+          </div>
+          <picture class="p-quiz-main__image">
+            <!-- todo: image size is different for mobile -->
+            <img src="../assets/img/quiz/img-quiz02.png" alt="population" />
+          </picture>
+          <div class="p-quiz-main__answer">
+            <h2 class="u-en p-quiz-main__answer__id">A</h2>
+            <div class="p-quiz-main__answer__choice-list">
+              <button class="p-quiz-main__answer__choice-item">
+                <span class="p-quiz-main__answer__choice-item__text"
+                  >INTECH</span
+                ><i class="u-icon__arrow"></i>
+              </button>
+              <button class="p-quiz-main__answer__choice-item">
+                <span class="p-quiz-main__answer__choice-item__text"
+                  >BIZZTECH</span
+                ><i class="u-icon__arrow"></i>
+              </button>
+              <!-- question -->
+              <button class="p-quiz-main__answer__choice-item">
+                <span class="p-quiz-main__answer__choice-item__text"></span
+                ><i class="u-icon__arrow"></i>
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="p-quiz-main__content">
+          <div class="p-quiz-main__question">
+            <h2 class="u-en p-quiz-main__question__id">Q3</h2>
+
+            <div class="p-quiz-main__question__text">
+              IoTとは何の略でしょう？
+            </div>
+          </div>
+          <picture class="p-quiz-main__image">
+            <img src="../assets/img/quiz/img-quiz03.png" alt="population" />
+          </picture>
+          <div class="p-quiz-main__answer">
+            <h2 class="u-en p-quiz-main__answer__id">A</h2>
+            <div class="p-quiz-main__answer__choice-list">
+              <button class="p-quiz-main__answer__choice-item">
+                <span class="p-quiz-main__answer__choice-item__text"
+                  >Internet of Things</span
+                ><i class="u-icon__arrow"></i>
+              </button>
+              <button class="p-quiz-main__answer__choice-item">
+                <span class="p-quiz-main__answer__choice-item__text"
+                  >Integrate into Technology</span
+                ><i class="u-icon__arrow"></i>
+              </button>
+              <button class="p-quiz-main__answer__choice-item">
+                <span class="p-quiz-main__answer__choice-item__text"
+                  >Information on Tool</span
+                ><i class="u-icon__arrow"></i>
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="p-quiz-main__content">
+          <div class="p-quiz-main__question">
+            <h2 class="u-en p-quiz-main__question__id">Q4</h2>
+
+            <div class="p-quiz-main__question__text">
+              日本が目指すサイバー空間とフィジカル空間を高度に融合させたシステムによって開かれる未来社会のことをなんと言うでしょうか？
+            </div>
+          </div>
+          <picture class="p-quiz-main__image">
+            <img src="../assets/img/quiz/img-quiz04.png" alt="population" />
+          </picture>
+          <div class="p-quiz-main__answer">
+            <h2 class="u-en p-quiz-main__answer__id">A</h2>
+            <div class="p-quiz-main__answer__choice-list">
+              <button class="p-quiz-main__answer__choice-item">
+                <span class="p-quiz-main__answer__choice-item__text"
+                  >Society 5.0</span
+                ><i class="u-icon__arrow"></i>
+              </button>
+              <button class="p-quiz-main__answer__choice-item">
+                <span class="p-quiz-main__answer__choice-item__text">CyPhy</span
+                ><i class="u-icon__arrow"></i>
+              </button>
+              <button class="p-quiz-main__answer__choice-item">
+                <span class="p-quiz-main__answer__choice-item__text">SDGs</span
+                ><i class="u-icon__arrow"></i>
+              </button>
+            </div>
+            <div class="p-quiz-main__answer__reference">
+              <i class="u-icon__note"></i
+              ><cite class="p-quiz-main__answer__reference__text">
+                Society5.0 - 科学技術政策 - 内閣府
+              </cite>
+            </div>
+          </div>
+        </section>
+        <section class="p-quiz-main__content">
+          <div class="p-quiz-main__question">
+            <h2 class="u-en p-quiz-main__question__id">Q5</h2>
+
+            <div class="p-quiz-main__question__text">
+              イギリスのコンピューター科学者であるギャビン・ウッド氏が提唱した、ブロックチェーン技術を活用した「次世代分散型インターネット」のことをなんと言うでしょう？
+            </div>
+          </div>
+          <picture class="p-quiz-main__image">
+            <img src="../assets/img/quiz/img-quiz05.png" alt="population" />
+          </picture>
+          <div class="p-quiz-main__answer">
+            <h2 class="u-en p-quiz-main__answer__id">A</h2>
+            <div class="p-quiz-main__answer__choice-list">
+              <button class="p-quiz-main__answer__choice-item">
+                <span class="p-quiz-main__answer__choice-item__text"
+                  >Web3.0</span
+                ><i class="u-icon__arrow"></i>
+              </button>
+              <button class="p-quiz-main__answer__choice-item">
+                <span class="p-quiz-main__answer__choice-item__text">NFT</span
+                ><i class="u-icon__arrow"></i>
+              </button>
+              <button class="p-quiz-main__answer__choice-item">
+                <span class="p-quiz-main__answer__choice-item__text"
+                  >メタバース</span
+                ><i class="u-icon__arrow"></i>
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="p-quiz-main__content">
+          <div class="p-quiz-main__question">
+            <h2 class="u-en p-quiz-main__question__id">Q6</h2>
+
+            <div class="p-quiz-main__question__text">
+              先進テクノロジー活用企業と出遅れた企業の収益性の差はどれくらいあると言われているでしょうか？
+            </div>
+          </div>
+          <picture class="p-quiz-main__image">
+            <img src="../assets/img/quiz/img-quiz06.png" alt="population" />
+          </picture>
+          <div class="p-quiz-main__answer">
+            <h2 class="u-en p-quiz-main__answer__id">A</h2>
+            <div class="p-quiz-main__answer__choice-list">
+              <button class="p-quiz-main__answer__choice-item">
+                <span class="p-quiz-main__answer__choice-item__text">約2倍</span
+                ><i class="u-icon__arrow"></i>
+              </button>
+              <button class="p-quiz-main__answer__choice-item">
+                <span class="p-quiz-main__answer__choice-item__text">約5倍</span
+                ><i class="u-icon__arrow"></i>
+              </button>
+              <button class="p-quiz-main__answer__choice-item">
+                <span class="p-quiz-main__answer__choice-item__text"
+                  >約11倍</span
+                ><i class="u-icon__arrow"></i>
+              </button>
+            </div>
+            <div class="p-quiz-main__answer__reference">
+              <i class="u-icon__note"></i
+              ><cite class="p-quiz-main__answer__reference__text">
+                Accenture Technology Vision 2021
+              </cite>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+    <section class="l-line p-line">
+      <div class="p-line__wrapper">
+        <div class="p-line__title">
+          <i class="u-icon__line"></i
+          ><span class="p-line__title__text"> POSSE 公式LINE </span>
+        </div>
+        <p class="p-line__content">
+          公式LINEにてご質問を随時受け付けております。<br />
+          詳細やPOSSE最新情報につきましては、公式LINEにてお知らせ致しますので<br />
+          下記ボタンより友達追加をお願いします！
+        </p>
+        <a href="#" class="p-line__link"
+          >LINE追加<i class="u-icon__link"></i
+        ></a>
+      </div>
+    </section>
+    <footer class="l-footer p-footer">
+      <div class="p-footer__upper">
+        <picture class="p-footer__logo">
+          <img src="../assets/img/logo.svg" alt="logo" />
+        </picture>
+        <div class="p-footer__website-link">
+          POSSE 公式サイト <i class="u-icon__link"></i>
+        </div>
+        <ul class="p-sns p-footer__sns">
+          <li class="p-sns__item">
+            <a href="#" class="p-sns__item__link"
+              ><i class="u-icon__twitter"></i
+            ></a>
+          </li>
+          <li class="p-sns__item">
+            <a href="#" class="p-sns__item__link"
+              ><i class="u-icon__instagram"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <div class="p-footer__lower">
+        <div class="p-footer__copy u-en">©︎2022 POSSE</div>
+      </div>
+    </footer>
+  </body>
+</html>

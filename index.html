@@ -18,6 +18,8 @@
     />
     <!-- style sheet -->
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <script src="./scripts/main.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -42,26 +44,31 @@
           />
         </a>
       </nav>
+      <span class="sp-menu js-spMenu hidden"></span>
     </header>
-    <a class="line-cta" href="#">
+    <div class="overlay js-overlay hidden">
+      <nav class="sp-nav">
+        <a href="#">POSSEとは</a>
+        <a href="./quiz">クイズ</a>
+      </nav>
+    </div>
+    <a class="line-cta js-lineCTA" href="#">
       <div class="line-logo">
         <img src="added_assets/img/LINE_Brand_icon.png" alt="line logo" />
       </div>
-      <p class="text">
-        POSSE公式LINEで<br />
-        最新情報をGET！
-      </p>
+      <!-- todo: text is different for mobile -->
+      <p class="text">POSSE公式LINEで最新情報をGET！</p>
       <div class="link-img">
         <img src="assets/img/icon/icon-link-light.svg" alt="" />
       </div>
     </a>
-    <main class="main">
+    <main class="main js-main">
       <section class="top">
         <div class="key-copy-wrapper">
           <p class="description">
             学生プログラミングコミュニティ POSSE（ポッセ）
           </p>
-          <p class="key-copy">自分史上最高<br />を仲間と。</p>
+          <p class="key-copy">自分史上最高を仲間と。</p>
         </div>
         <div class="key-visual">
           <img src="assets/img/img-hero.jpg" alt="key-visual" />
@@ -91,12 +98,12 @@
           class="background"
         />
         <div class="title">
-          <h2 class="heading">POSSE 公式LINE</h2>
           <img
             src="added_assets/img/LINE_Brand_icon.png"
             alt="line logo"
             class="logo"
           />
+          <h2 class="heading">POSSE 公式LINE</h2>
         </div>
         <p class="description">
           公式LINEにてご質問を随時受け付けております。<br />
@@ -109,15 +116,15 @@
         </a>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer js-footer">
       <img
         src="assets/img/logo.svg"
         alt="logo"
-        class="logo"
+        class="logo js-footerLogo"
         width="202px"
         height="39.22px"
       />
-      <p class="link">POSSE 公式サイト</p>
+      <a href="#" class="link">POSSE 公式サイト</a>
       <ul class="sns-list">
         <li class="sns-item">
           <a href="#"
@@ -138,7 +145,7 @@
           /></a>
         </li>
       </ul>
-      <div class="copy">
+      <div class="copy js-footerCopy">
         <small>&copy; 2022 POSSE</small>
       </div>
     </footer>

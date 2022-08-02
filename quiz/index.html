@@ -47,263 +47,45 @@
         <span class="p-quiz-hero__caption">POSSE課題</span>
         <h1 class="p-quiz-hero__heading">ITクイズ</h1>
       </section>
-      <section class="p-quiz-main">
-        <section class="p-quiz-main__content js-quiz">
+      <section class="p-quiz-main js-quizzesWrapper">
+        <section class="p-quiz-main__content u-state__hidden js-quiz">
           <div class="p-quiz-main__question">
-            <h2 class="u-en p-quiz-main__question__id">Q1</h2>
-
-            <div class="p-quiz-main__question__text">
-              日本のIT人材が2030年には最大どれくらい不足すると言われているでしょうか？
-            </div>
+            <h2 class="u-en p-quiz-main__question__id js-quizQuestionID"></h2>
+            <div class="p-quiz-main__question__text js-quizQuestionText"></div>
           </div>
           <picture class="p-quiz-main__image">
-            <img src="../assets/img/quiz/img-quiz01.png" alt="population" />
+            <img class="js-quizImage" alt="quiz image" />
           </picture>
           <div class="p-quiz-main__choice">
             <h2 class="u-en p-quiz-main__choice__id">A</h2>
-            <div class="p-quiz-main__choice__list">
-              <button class="p-quiz-main__choice__item js-choice">
-                <span class="p-quiz-main__choice__item__text">約28万人</span
-                ><i class="u-icon__arrow"></i>
-              </button>
-              <button class="p-quiz-main__choice__item js-choice">
-                <span class="p-quiz-main__choice__item__text">約79万人</span
-                ><i class="u-icon__arrow"></i>
-              </button>
-              <button class="p-quiz-main__choice__item js-choice">
-                <span class="p-quiz-main__choice__item__text">約183万人</span
+            <div class="p-quiz-main__choice__list js-quizChoiceWrapper">
+              <button
+                class="p-quiz-main__choice__item u-state__hidden js-quizChoice"
+              >
+                <span
+                  class="p-quiz-main__choice__item__text js-quizChoiceText"
+                ></span
                 ><i class="u-icon__arrow"></i>
               </button>
             </div>
-            <div class="p-quiz-main__choice__answer js-answer u-state__hidden">
+            <div class="p-quiz-main__choice__answer js-quizAnswer u-state__hidden">
               <span
-                class="p-quiz-main__choice__answer__title js-answerTitle"
+                class="p-quiz-main__choice__answer__title js-quizAnswerTitle"
               ></span>
               <div class="p-quiz-main__choice__answer__wrapper">
                 <span class="p-quiz-main__choice__answer__id u-en">A</span
                 ><span
-                  class="p-quiz-main__choice__answer__text js-answerText"
+                  class="p-quiz-main__choice__answer__text js-quizAnswerText"
                 ></span>
               </div>
             </div>
-            <div class="p-quiz-main__choice__reference">
+            <div
+              class="p-quiz-main__choice__reference u-state__hidden js-quizReference"
+            >
               <i class="u-icon__note"></i
-              ><cite class="p-quiz-main__choice__reference__text">
-                経済産業省 2019年3月 － IT 人材需給に関する調査
-              </cite>
-            </div>
-          </div>
-        </section>
-        <section class="p-quiz-main__content js-quiz">
-          <div class="p-quiz-main__question">
-            <h2 class="u-en p-quiz-main__question__id">Q2</h2>
-
-            <div class="p-quiz-main__question__text">
-              既存業界のビジネスと、先進的なテクノロジーを結びつけて生まれた、新しいビジネスのことをなんと言うでしょう？
-            </div>
-          </div>
-          <picture class="p-quiz-main__image">
-            <!-- todo: image size is different for mobile -->
-            <img src="../assets/img/quiz/img-quiz02.png" alt="population" />
-          </picture>
-          <div class="p-quiz-main__choice">
-            <h2 class="u-en p-quiz-main__choice__id">A</h2>
-            <div class="p-quiz-main__choice__list">
-              <button class="p-quiz-main__choice__item js-choice">
-                <span class="p-quiz-main__choice__item__text">INTECH</span
-                ><i class="u-icon__arrow"></i>
-              </button>
-              <button class="p-quiz-main__choice__item js-choice">
-                <span class="p-quiz-main__choice__item__text">BIZZTECH</span
-                ><i class="u-icon__arrow"></i>
-              </button>
-              <button class="p-quiz-main__choice__item js-choice">
-                <span class="p-quiz-main__choice__item__text"></span
-                ><i class="u-icon__arrow"></i>
-              </button>
-            </div>
-            <div class="p-quiz-main__choice__answer js-answer u-state__hidden">
-              <span
-                class="p-quiz-main__choice__answer__title js-answerTitle"
-              ></span>
-              <div class="p-quiz-main__choice__answer__wrapper">
-                <span class="p-quiz-main__choice__answer__id u-en">A</span
-                ><span
-                  class="p-quiz-main__choice__answer__text js-answerText"
-                ></span>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="p-quiz-main__content js-quiz">
-          <div class="p-quiz-main__question">
-            <h2 class="u-en p-quiz-main__question__id">Q3</h2>
-            <div class="p-quiz-main__question__text">
-              IoTとは何の略でしょう？
-            </div>
-          </div>
-          <picture class="p-quiz-main__image">
-            <img src="../assets/img/quiz/img-quiz03.png" alt="population" />
-          </picture>
-          <div class="p-quiz-main__choice">
-            <h2 class="u-en p-quiz-main__choice__id">A</h2>
-            <div class="p-quiz-main__choice__list">
-              <button class="p-quiz-main__choice__item js-choice">
-                <span class="p-quiz-main__choice__item__text"
-                  >Internet of Things</span
-                ><i class="u-icon__arrow"></i>
-              </button>
-              <button class="p-quiz-main__choice__item js-choice">
-                <span class="p-quiz-main__choice__item__text"
-                  >Integrate into Technology</span
-                ><i class="u-icon__arrow"></i>
-              </button>
-              <button class="p-quiz-main__choice__item js-choice">
-                <span class="p-quiz-main__choice__item__text"
-                  >Information on Tool</span
-                ><i class="u-icon__arrow"></i>
-              </button>
-            </div>
-            <div class="p-quiz-main__choice__answer js-answer u-state__hidden">
-              <span
-                class="p-quiz-main__choice__answer__title js-answerTitle"
-              ></span>
-              <div class="p-quiz-main__choice__answer__wrapper">
-                <span class="p-quiz-main__choice__answer__id u-en">A</span
-                ><span
-                  class="p-quiz-main__choice__answer__text js-answerText"
-                ></span>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="p-quiz-main__content js-quiz">
-          <div class="p-quiz-main__question">
-            <h2 class="u-en p-quiz-main__question__id">Q4</h2>
-
-            <div class="p-quiz-main__question__text">
-              日本が目指すサイバー空間とフィジカル空間を高度に融合させたシステムによって開かれる未来社会のことをなんと言うでしょうか？
-            </div>
-          </div>
-          <picture class="p-quiz-main__image">
-            <img src="../assets/img/quiz/img-quiz04.png" alt="population" />
-          </picture>
-          <div class="p-quiz-main__choice">
-            <h2 class="u-en p-quiz-main__choice__id">A</h2>
-            <div class="p-quiz-main__choice__list">
-              <button class="p-quiz-main__choice__item js-choice">
-                <span class="p-quiz-main__choice__item__text">Society 5.0</span
-                ><i class="u-icon__arrow"></i>
-              </button>
-              <button class="p-quiz-main__choice__item js-choice">
-                <span class="p-quiz-main__choice__item__text">CyPhy</span
-                ><i class="u-icon__arrow"></i>
-              </button>
-              <button class="p-quiz-main__choice__item js-choice">
-                <span class="p-quiz-main__choice__item__text">SDGs</span
-                ><i class="u-icon__arrow"></i>
-              </button>
-            </div>
-            <div class="p-quiz-main__choice__answer js-answer u-state__hidden">
-              <span
-                class="p-quiz-main__choice__answer__title js-answerTitle"
-              ></span>
-              <div class="p-quiz-main__choice__answer__wrapper">
-                <span class="p-quiz-main__choice__answer__id u-en">A</span
-                ><span
-                  class="p-quiz-main__choice__answer__text js-answerText"
-                ></span>
-              </div>
-            </div>
-            <div class="p-quiz-main__choice__reference">
-              <i class="u-icon__note"></i
-              ><cite class="p-quiz-main__choice__reference__text">
-                Society5.0 - 科学技術政策 - 内閣府
-              </cite>
-            </div>
-          </div>
-        </section>
-        <section class="p-quiz-main__content js-quiz">
-          <div class="p-quiz-main__question">
-            <h2 class="u-en p-quiz-main__question__id">Q5</h2>
-            <div class="p-quiz-main__question__text">
-              イギリスのコンピューター科学者であるギャビン・ウッド氏が提唱した、ブロックチェーン技術を活用した「次世代分散型インターネット」のことをなんと言うでしょう？
-            </div>
-          </div>
-          <picture class="p-quiz-main__image">
-            <img src="../assets/img/quiz/img-quiz05.png" alt="population" />
-          </picture>
-          <div class="p-quiz-main__choice">
-            <h2 class="u-en p-quiz-main__choice__id">A</h2>
-            <div class="p-quiz-main__choice__list">
-              <button class="p-quiz-main__choice__item js-choice">
-                <span class="p-quiz-main__choice__item__text">Web3.0</span
-                ><i class="u-icon__arrow"></i>
-              </button>
-              <button class="p-quiz-main__choice__item js-choice">
-                <span class="p-quiz-main__choice__item__text">NFT</span
-                ><i class="u-icon__arrow"></i>
-              </button>
-              <button class="p-quiz-main__choice__item js-choice">
-                <span class="p-quiz-main__choice__item__text">メタバース</span
-                ><i class="u-icon__arrow"></i>
-              </button>
-            </div>
-            <div class="p-quiz-main__choice__answer js-answer u-state__hidden">
-              <span
-                class="p-quiz-main__choice__answer__title js-answerTitle"
-              ></span>
-              <div class="p-quiz-main__choice__answer__wrapper">
-                <span class="p-quiz-main__choice__answer__id u-en">A</span
-                ><span
-                  class="p-quiz-main__choice__answer__text js-answerText"
-                ></span>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="p-quiz-main__content js-quiz">
-          <div class="p-quiz-main__question">
-            <h2 class="u-en p-quiz-main__question__id">Q6</h2>
-            <div class="p-quiz-main__question__text">
-              先進テクノロジー活用企業と出遅れた企業の収益性の差はどれくらいあると言われているでしょうか？
-            </div>
-          </div>
-          <picture class="p-quiz-main__image">
-            <img src="../assets/img/quiz/img-quiz06.png" alt="population" />
-          </picture>
-          <div class="p-quiz-main__choice">
-            <h2 class="u-en p-quiz-main__choice__id">A</h2>
-            <div class="p-quiz-main__choice__list">
-              <button class="p-quiz-main__choice__item js-choice">
-                <span class="p-quiz-main__choice__item__text">約2倍</span
-                ><i class="u-icon__arrow"></i>
-              </button>
-              <button class="p-quiz-main__choice__item js-choice">
-                <span class="p-quiz-main__choice__item__text">約5倍</span
-                ><i class="u-icon__arrow"></i>
-              </button>
-              <button class="p-quiz-main__choice__item js-choice">
-                <span class="p-quiz-main__choice__item__text">約11倍</span
-                ><i class="u-icon__arrow"></i>
-              </button>
-            </div>
-            <div class="p-quiz-main__choice__answer js-answer u-state__hidden">
-              <span
-                class="p-quiz-main__choice__answer__title js-answerTitle"
-              ></span>
-              <div class="p-quiz-main__choice__answer__wrapper">
-                <span class="p-quiz-main__choice__answer__id u-en">A</span
-                ><span
-                  class="p-quiz-main__choice__answer__text js-answerText"
-                ></span>
-              </div>
-            </div>
-            <div class="p-quiz-main__choice__reference">
-              <i class="u-icon__note"></i
-              ><cite class="p-quiz-main__choice__reference__text">
-                Accenture Technology Vision 2021
-              </cite>
+              ><cite
+                class="p-quiz-main__choice__reference__text js-quizReferenceText"
+              ></cite>
             </div>
           </div>
         </section>

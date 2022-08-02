@@ -85,7 +85,6 @@ const shuffleArray = (array) => {
     quiz.choices = shuffleArray(quiz.choices);
   });
   quizzes = shuffleArray(quizzes);
-  console.log(quizzes);
 
   const quizzesWrapperElement = document.querySelector(
     "." + CLASS_QUIZZES_WRAPPER

@@ -1,6 +1,6 @@
 "use-strict";
 
-const quizzes = [
+let quizzes = [
   {
     question:
       "日本のIT人材が2030年には最大どれくらい不足すると言われているでしょうか？",
@@ -52,6 +52,7 @@ const quizzes = [
 ];
 
 const ASSET_PATH = "../";
+
 const CLASS_QUIZZES_WRAPPER = "js-quizzesWrapper";
 const CLASS_CHOICE = "js-quizChoice";
 const CLASS_QUIZ = "js-quiz";
@@ -68,8 +69,23 @@ const CLASS_ANSWER_TEXT = "js-quizAnswerText";
 
 const CLASS_HIDDEN = "u-state__hidden";
 
+// https://www.softel.co.jp/blogs/tech/archives/2328
+const shuffleArray = (array) => {
+  return array
+    .map((elem) => {
+      return { weight: Math.random(), value: elem };
+    })
+    .sort((a, b) => a.weight - b.weight)
+    .map((elem) => elem.value);
+};
+
 // setup for quiz
 {
+  quizzes.forEach((quiz) => {
+    quiz.choices = shuffleArray(quiz.choices);
+  });
+  quizzes = shuffleArray(quizzes);
+
   const quizzesWrapperElement = document.querySelector(
     "." + CLASS_QUIZZES_WRAPPER
   );

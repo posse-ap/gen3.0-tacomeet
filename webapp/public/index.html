@@ -5,9 +5,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Webpack App</title>
+    <script src="bundle.js" defer></script>
   </head>
-  <body>
-    <h1 class="text-4xl text-blue-700 m-10">My Webpack + Tailwind App</h1>
-    <script src="bundle.js"></script>
+  <body class="bg-[#f5f5f8]">
+    <header class="h-[64px] flex gap-6 items-center bg-white px-4 md:justify-between">
+      <div class="flex gap-6 items-center">
+        <img src="./assets/img/logo.svg" alt="" class="" />
+        <span class="text-[#97b9d1]">4th week</span>
+      </div>
+      <div
+        class="hidden md:inline-block w-52 bg-gradient-to-r from-[#0f71bc] to-[#3ccfff] rounded-full text-center py-2 text-white text-lg"
+      >
+        記録・投稿
+      </div>
+    </header>
+    <main class="flex flex-col gap-8 p-[20px]">
+      <div
+        class="flex flex-col gap-[16px] md:flex-row md:gap-[20px] md:justify-center"
+      >
+        <div
+          class="flex flex-col gap-[16px] justify-between md:gap-[20px] md:w-full"
+        >
+          <div class="flex justify-around gap-[16px] md:gap-[20px]">
+            <div
+              class="flex flex-col items-center gap-2 py-3 bg-white rounded-xl w-full shadow-md"
+            >
+              <span class="text-[#0f71bc] font-semibold">Today</span>
+              <span class="text-3xl font-bold">3</span>
+              <span class="text-[#97b9d1]">hour</span>
+            </div>
+            <div
+              class="flex flex-col items-center gap-2 py-3 bg-white rounded-xl w-full shadow-md"
+            >
+              <span class="text-[#0f71bc] font-semibold">Month</span>
+              <span class="text-3xl font-bold">120</span>
+              <span class="text-[#97b9d1]">hour</span>
+            </div>
+            <div
+              class="flex flex-col items-center gap-2 py-3 bg-white rounded-xl w-full shadow-md"
+            >
+              <span class="text-[#0f71bc] font-semibold">Total</span>
+              <span class="text-3xl font-bold">1348</span>
+              <span class="text-[#97b9d1]">hour</span>
+            </div>
+          </div>
+          <div class="bg-gray-200 h-1 w-full md:hidden"></div>
+          <div class="rounded-lg bg-white">
+            <img src="./assets/img/bar_graph.png" alt="" class="mx-auto" />
+          </div>
+        </div>
+        <div class="flex justify-around gap-[16px] md:gap-[20px] md:w-full">
+          <div class="rounded-lg bg-white p-5 w-full">
+            <span class="font-bold text-lg">学習コンテンツ</span>
+            <img src="./assets/img/pie_graph1.png" alt="" />
+          </div>
+          <div class="rounded-lg bg-white p-5 w-full">
+            <span class="font-bold text-lg">学習言語</span>
+            <img src="./assets/img/pie_graph2.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="flex gap-4 items-center justify-center">
+        <spans
+          class="border-t-[2px] border-t-[#0f71bc] border-l-[2px] border-l-[#0f71bc] w-4 h-4 -rotate-45"
+        ></spans>
+        <span class="font-bold text-lg">2020年 10月</span>
+        <span
+          class="border-t-[2px] border-t-[#97b9d1] border-r-[2px] border-r-[#97b9d1] w-4 h-4 rotate-45"
+        ></span>
+      </div>
+      <div
+        class="bottom-[20px] bg-gradient-to-r from-[#0f71bc] to-[#3ccfff] rounded-full text-center py-3 text-white text-xl md:hidden"
+      >
+        記録・投稿
+      </div>
+    </main>
   </body>
 </html>

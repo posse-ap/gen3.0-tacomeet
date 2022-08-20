@@ -4,14 +4,19 @@ import languageChoices from "./assets/json/language_choices.json";
 
 const setupButtons = () => {
   const body = document.getElementById("js-body");
-  const submitTopButtons = document.querySelectorAll(".js-top-submit");
+  const topSubmitButtons = document.querySelectorAll(".js-top-submit");
   const overlay = document.getElementById("js-overlay");
   const modal = document.getElementById("js-modal");
+  const modalForm = document.getElementById("js-modal--form");
+  const modalAfterSubmit = document.getElementById("js-modal--after-submit");
+  const modalSubmitButton = document.getElementById("js-modal-submit");
 
-  submitTopButtons.forEach((button) => {
+  topSubmitButtons.forEach((button) => {
     button.addEventListener("click", () => {
       overlay.classList.remove("hidden");
       modal.classList.remove("hidden");
+      modalForm.classList.remove("hidden");
+      modalAfterSubmit.classList.add("hidden");
       body.classList.add("overflow-y-hidden");
     });
   });
@@ -25,6 +30,11 @@ const setupButtons = () => {
 
   overlay.addEventListener("click", () => {
     modalClose.click();
+  });
+
+  modalSubmitButton.addEventListener("click", () => {
+    modalAfterSubmit.classList.remove("hidden");
+    modalForm.classList.add("hidden");
   });
 };
 

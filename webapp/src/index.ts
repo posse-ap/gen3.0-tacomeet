@@ -4,7 +4,6 @@ import languageChoices from "./assets/json/language_choices.json";
 
 const setupButtons = () => {
   const body = document.getElementById("js-body");
-  body.classList.add("overflow-y-hidden");
   const submitTopButtons = document.querySelectorAll(".js-top-submit");
   const overlay = document.getElementById("js-overlay");
   const modal = document.getElementById("js-modal");

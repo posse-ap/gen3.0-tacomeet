@@ -5,9 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web App</title>
+    <script
+      src="https://kit.fontawesome.com/38488db4e9.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="bundle.js" defer></script>
   </head>
-  <body class="bg-[#f5f5f8]">
+  <body class="bg-[#f5f5f8] overflow-y-hidden" id="js-body">
     <header
       class="h-[64px] flex gap-6 items-center bg-white px-4 md:justify-between"
     >
@@ -16,12 +20,98 @@
         <span class="text-[#97b9d1]">4th week</span>
       </div>
       <div
-        class="hidden md:inline-block w-52 bg-gradient-to-r from-[#0f71bc] to-[#3ccfff] rounded-full text-center py-2 text-white text-lg"
+        class="hidden md:inline-block w-52 bg-gradient-to-r from-[#0f71bc] to-[#3ccfff] rounded-full text-center py-2 text-white text-lg js-top-submit"
       >
         記録・投稿
       </div>
     </header>
-    <main class="flex flex-col gap-8 p-[20px]">
+    <div
+      class="hidden w-[100vw] h-[100vh] fixed top-0 bg-[#000a]"
+      id="js-overlay"
+    ></div>
+    <div
+      class="hidden fixed bottom-0 w-full h-[90vh] bg-white z-10 rounded-t-[30px] p-[20px] overflow-y-auto md:max-w-[900px] md:h-[85vh] md:rounded-[30px] md:top-[10vh] md:left-[50%] md:-translate-x-[50%]"
+      id="js-modal"
+    >
+      <div class="text-right">
+        <button id="js-modal-close">
+          <i class="fa-regular fa-circle-xmark text-3xl"></i>
+        </button>
+      </div>
+      <form action="" class="flex flex-col gap-[22px]">
+        <div
+          class="flex flex-col gap-[24px] md:flex-row md:gap[40px] md:px-[56px]"
+        >
+          <div class="flex flex-col gap-[24px] w-full">
+            <div class="flex flex-col gap-[10px]">
+              <label for="date" class="font-bold">学習日</label>
+              <input
+                type="date"
+                name="date"
+                id="date"
+                value="2020-10-27"
+                class="h-[40px] bg-[#f5f5f8] p-2"
+              />
+            </div>
+            <div class="flex flex-col gap-[10px]">
+              <p class="font-bold">学習コンテンツ（複数選択可）</p>
+              <div
+                class="flex gap-[8px] flex-wrap"
+                id="js-wrapper-content"
+              ></div>
+            </div>
+            <div class="flex flex-col gap-[10px]">
+              <p class="font-bold">学習言語（複数選択可）</p>
+              <div
+                class="flex gap-[8px] flex-wrap"
+                id="js-wrapper-language"
+              ></div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-[24px] w-full">
+            <div class="flex flex-col gap-10px">
+              <label for="amount" class="font-bold">学習時間</label>
+              <input
+                type="number"
+                name="amount"
+                id="amount"
+                class="h-[40px] bg-[#f5f5f8] p-2"
+              />
+            </div>
+            <div class="flex flex-col gap-10px">
+              <label for="twitter-comment" class="font-bold"
+                >Twitter用コメント</label
+              >
+              <textarea
+                name="twitter-comment"
+                id="twitter-comment"
+                class="h-[100px] bg-[#f5f5f8] p-2 resize-none"
+              ></textarea>
+              <input
+                type="checkbox"
+                id="post-to-twitter"
+                class="peer sr-only"
+              />
+              <label
+                class="inline-flex items-center gap-2 text-[#cccccc] peer-checked:text-[#0f71bc]"
+                for="post-to-twitter"
+                ><i class="fa-solid fa-square-check text-xl"></i
+                ><span class="text-black font-normal"
+                  >Twitterにシェアする</span
+                ></label
+              >
+            </div>
+          </div>
+        </div>
+        <button
+          class="bottom-[20px] bg-gradient-to-r from-[#0f71bc] to-[#3ccfff] rounded-full text-center py-3 text-white text-xl shadow-[0_4px_6px_-1px_#3ccfff] md:w-[50%] md:m-auto"
+          id="js-modal-submit"
+        >
+          記録・投稿
+        </button>
+      </form>
+    </div>
+    <main class="flex flex-col gap-8 p-[20px] overflow-y-hidden" id="js-main">
       <div
         class="flex flex-col gap-[16px] md:flex-row md:gap-[20px] md:justify-center"
       >
@@ -76,11 +166,23 @@
           class="border-t-[2px] border-t-[#97b9d1] border-r-[2px] border-r-[#97b9d1] w-4 h-4 rotate-45"
         ></span>
       </div>
-      <div
-        class="bottom-[20px] bg-gradient-to-r from-[#0f71bc] to-[#3ccfff] rounded-full text-center py-3 text-white text-xl shadow-[0_4px_6px_-1px_#3ccfff] md:hidden"
+      <button
+        class="bottom-[20px] bg-gradient-to-r from-[#0f71bc] to-[#3ccfff] rounded-full text-center py-3 text-white text-xl shadow-[0_4px_6px_-1px_#3ccfff] md:hidden js-top-submit"
       >
         記録・投稿
-      </div>
+      </button>
     </main>
+
+    <!-- templates -->
+    <div class="hidden">
+      <div id="js-templ-choice">
+        <input type="checkbox" class="peer sr-only" />
+        <label
+          class="inline-flex items-center gap-2 font-bold bg-[#f5f5f8] rounded-full w-auto px-4 py-2 text-[#cccccc] peer-checked:bg-[#e7f5ff] peer-checked:text-[#0f71bc]"
+          ><i class="fa-solid fa-square-check text-xl"></i
+          ><span class="text-black font-normal"></span
+        ></label>
+      </div>
+    </div>
   </body>
 </html>

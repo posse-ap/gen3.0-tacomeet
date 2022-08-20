@@ -1,0 +1,10 @@
+[
+  { "displayName": "HTML", "id": "html" },
+  { "displayName": "CSS", "id": "css" },
+  { "displayName": "JavaScript", "id": "javascript" },
+  { "displayName": "PHP", "id": "php" },
+  { "displayName": "Laravel", "id": "laravel" },
+  { "displayName": "SQL", "id": "sql" },
+  { "displayName": "SHELL", "id": "shell" },
+  { "displayName": "情報システム基礎知識(その他)", "id": "basic-system" }
+]

@@ -17,6 +17,8 @@
     "build": "webpack"
   },
   "dependencies": {
+    "@types/google.visualization": "^0.0.68",
+    "axios": "^0.27.2",
     "postcss-preset-env": "^7.8.0"
   }
 }

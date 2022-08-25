@@ -1,6 +1,7 @@
 import "./style.css";
 import contentChoices from "./assets/json/content_choices.json";
 import languageChoices from "./assets/json/language_choices.json";
+import { setupChart, drawCharts } from "./chart";
 
 const setupButtons = () => {
   const body = document.getElementById("js-body");
@@ -71,3 +72,8 @@ const createChoices = () => {
 
 setupButtons();
 createChoices();
+setupChart();
+
+window.onresize = function () {
+  drawCharts();
+};

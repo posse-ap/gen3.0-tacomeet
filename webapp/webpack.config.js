@@ -26,8 +26,11 @@ module.exports = {
       },
       {
         test: /\.ts$/,
-        use: 'ts-loader',
+        use: "ts-loader",
       },
     ],
+  },
+  resolve: {
+    extensions: [".ts", ".js"],
   },
 };

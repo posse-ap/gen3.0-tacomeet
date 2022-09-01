@@ -2,41 +2,62 @@ import "./style.css";
 import contentChoices from "./assets/json/content_choices.json";
 import languageChoices from "./assets/json/language_choices.json";
 import { setupChart, drawCharts } from "./chart";
+import { setupCalendar } from "./calendar";
 
 const setupButtons = () => {
   const body = document.getElementById("js-body");
-  const topSubmitButtons = document.querySelectorAll(".js-top-submit");
   const overlay = document.getElementById("js-overlay");
   const modal = document.getElementById("js-modal");
+
   const modalForm = document.getElementById("js-modal--form");
   const modalAfterSubmit = document.getElementById("js-modal--after-submit");
+  const modalLoading = document.getElementById("js-modal--loading");
+  const modalCalendar = document.getElementById("js-modal--calendar");
+  const modals = [modalForm, modalAfterSubmit, modalLoading, modalCalendar];
+
+  const topSubmitButtons = document.querySelectorAll(".js-top-submit");
   const modalSubmitButton = document.getElementById("js-modal-submit");
+
+  const modalCloseButton = document.getElementById("js-modal-close");
+
+  const openModal = (modalElement: HTMLElement) => {
+    overlay.classList.remove("hidden");
+    modal.classList.remove("hidden");
+    modals.forEach((modal) => {
+      modal.classList.add("hidden");
+    });
+    modalElement.classList.remove("hidden");
+    body.classList.add("overflow-y-hidden");
+  };
 
   topSubmitButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      overlay.classList.remove("hidden");
-      modal.classList.remove("hidden");
-      modalForm.classList.remove("hidden");
-      modalAfterSubmit.classList.add("hidden");
-      body.classList.add("overflow-y-hidden");
+      openModal(modalForm);
     });
   });
 
-  const modalClose = document.getElementById("js-modal-close");
-  modalClose.addEventListener("click", () => {
+  modalSubmitButton.addEventListener("click", () => {
+    modalLoading.classList.remove("hidden");
+    modalForm.classList.add("hidden");
+    (modalCloseButton as HTMLButtonElement).disabled = true;
+    overlay.removeEventListener("click", closeModal);
+    setTimeout(() => {
+      modalAfterSubmit.classList.remove("hidden");
+      modalLoading.classList.add("hidden");
+      (modalCloseButton as HTMLButtonElement).disabled = false;
+      overlay.addEventListener("click", closeModal);
+    }, 5000);
+  });
+
+  const closeModal = () => {
     overlay.classList.add("hidden");
     modal.classList.add("hidden");
     body.classList.remove("overflow-y-hidden");
-  });
+  };
 
-  overlay.addEventListener("click", () => {
-    modalClose.click();
-  });
+  modalCloseButton.addEventListener("click", closeModal);
 
-  modalSubmitButton.addEventListener("click", () => {
-    modalAfterSubmit.classList.remove("hidden");
-    modalForm.classList.add("hidden");
-  });
+  overlay.addEventListener("click", closeModal);
 };
 
 interface choice {
@@ -73,6 +94,7 @@ const createChoices = () => {
 setupButtons();
 createChoices();
 setupChart();
+setupCalendar();
 
 window.onresize = function () {
   drawCharts();

@@ -1,0 +1,15 @@
+@startuml ph2-website
+
+class Question {
+  int id
+  varchar text
+}
+
+class Choice {
+  int id
+  varchar text
+  int questionID <<FK>>
+}
+Question "1".."*" Choice
+
+@enduml

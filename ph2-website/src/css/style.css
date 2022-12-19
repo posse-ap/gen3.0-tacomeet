@@ -1,0 +1,365 @@
+@charset "UTF-8";
+@import url("animation.css");
+
+/* reset */
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* variable */
+:root {
+  --primary: #0071bc;
+  --primary-light: #eff2f5;
+  --dark: #333333;
+  --gray: #adadad;
+  --gray-dark: #666666;
+  --gray-light: #eeeeee;
+}
+
+/* overall */
+
+html {
+  width: 1440px;
+  color: var(--dark);
+  font-family: "Noto Sans JP";
+  font-weight: 700;
+}
+img {
+  width: 100%;
+}
+
+/* header */
+.header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  z-index: 2;
+}
+.header .logo {
+  margin-left: 24px;
+  width: 148px;
+}
+.global-nav {
+  display: flex;
+  width: 308px;
+  height: 100%;
+  /* margin-top: 15px; */
+  margin-right: 24px;
+  justify-content: space-between;
+  align-items: center;
+}
+.global-nav a {
+  color: var(--gray-dark);
+  font-size: 14px;
+  text-decoration: none;
+}
+.global-nav a:hover {
+  text-decoration: underline;
+}
+.global-nav .icon-sns {
+  display: inline-flex;
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--gray-light);
+  border-radius: 50px;
+  justify-content: center;
+}
+.icon-sns--twitter {
+  width: 25px;
+}
+.icon-sns--instagram {
+  width: 24px;
+}
+
+/* line-cta */
+.line-cta {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  bottom: 16px;
+  right: 16px;
+  width: 288px;
+  height: 80px;
+  background-color: #5fdf5b;
+  align-items: center;
+  border-radius: 16px;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.15);
+  /* a tagにつけないといけない */
+  text-decoration: none;
+  z-index: 2;
+}
+.line-cta .line-logo {
+  display: inline-block;
+  width: 36px;
+}
+.line-cta .text {
+  display: inline-block;
+
+  width: 142px;
+
+  font-size: 14px;
+  color: #fff;
+  line-height: 1.3;
+  /* todo */
+  /* letter-spacing: 0.14em; */
+  letter-spacing: 0.1em;
+}
+.line-cta .link-img {
+  display: inline-block;
+  width: 18px;
+  margin: 9px;
+  height: 18px;
+}
+
+/* main */
+.main {
+  /* margin-topにするとheaderにもmarginがかかったみたいになっちゃう */
+  padding: 80px 0;
+  /* margin: 80px 0; */
+  border-bottom: 1px solid var(--gray-light);
+}
+/* top */
+.top {
+  position: relative;
+  height: 680px;
+}
+.top .key-copy-wrapper {
+  display: inline-block;
+  width: 500px;
+  height: 281px;
+  position: absolute;
+  top: 198px;
+  left: 80px;
+  background-color: var(--primary-light);
+  border-radius: 24px;
+  z-index: 1;
+  text-align: center;
+}
+.top .key-copy-wrapper .description {
+  margin-top: 40px;
+  color: var(--primary);
+  font-size: 16px;
+  line-height: 28.8px;
+}
+.top .key-copy-wrapper .key-copy {
+  margin-top: 12px;
+  font-size: 60px;
+  line-height: 80px;
+  letter-spacing: 5px;
+}
+.top .key-visual {
+  display: inline-block;
+  position: absolute;
+  width: 976px;
+  height: 680px;
+  right: 0;
+}
+.top .key-visual img {
+  border-radius: 80px 0px 0px 80px;
+}
+.top .scroll-down {
+  display: inline-block;
+  position: absolute;
+  left: 126px;
+  bottom: 24px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  animation: showup-hide 2s ease-in-out infinite;
+}
+.top .scroll-down::before {
+  position: absolute;
+  top: 6px;
+  left: -15px;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  content: "";
+  border-radius: 4px;
+  background-color: var(--gray);
+  animation: top2bottom 2s ease-in-out infinite,
+    showup-hide 2s ease-in-out infinite;
+}
+
+/* about */
+.about {
+  margin: 96px 228px;
+}
+.about .title {
+  text-align: center;
+}
+.about .title .heading {
+  font-size: 36px;
+  line-height: 54px;
+}
+.about .title .description-en {
+  color: var(--primary);
+  font-size: 14px;
+  line-height: 25.2px;
+}
+.about .description {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+.about .description img {
+  border-radius: 24px;
+  width: 472px;
+  height: 312px;
+}
+.about .description .text {
+  display: flex;
+  width: 472px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.8;
+  align-items: center;
+  text-align: justify;
+}
+
+/* line */
+.line {
+  position: relative;
+  width: 984px;
+  height: 357px;
+  margin: 140px 230px 0;
+  background-color: rgba(0, 113, 188, 0.9);
+  border-radius: 48px;
+  /* opacity: 0.1; */
+}
+.line .background {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 984px;
+  height: 357px;
+  border-radius: 48px;
+  z-index: -1;
+}
+.line .title .heading {
+  position: absolute;
+  top: 68px;
+  left: 375px;
+  color: #fff;
+  font-size: 36px;
+  line-height: 64.8px;
+}
+.line .title .logo {
+  position: absolute;
+  top: 81px;
+  left: 327px;
+  width: 40px;
+  height: 40px;
+}
+.line .description {
+  position: absolute;
+  top: 149px;
+  left: 224px;
+  width: 535px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 22.4px;
+  text-align: center;
+  letter-spacing: 10%;
+}
+.line .cta {
+  position: absolute;
+  top: 239px;
+  left: 331px;
+  display: block;
+  width: 320px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 25px;
+  text-align: center;
+}
+.line .cta .text {
+  position: absolute;
+  left: 121px;
+  display: inline;
+  color: var(--gray-dark);
+  text-decoration: none;
+  /* vertical-align: middle; */
+  line-height: 50px;
+  letter-spacing: 0.1em;
+}
+.line .cta img {
+  position: absolute;
+  top: 18px;
+  right: 19px;
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+}
+
+/* footer */
+
+.footer {
+  width: 100%;
+  margin-top: 56px;
+  text-align: center;
+}
+.footer .link {
+  display: inline-block;
+  margin-top: 24px;
+
+  color: var(--gray-dark);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.8;
+}
+.footer .link::after {
+  display: inline-block;
+  content: "";
+  width: 14px;
+  height: 14px;
+  margin-left: 4px;
+  background-image: url("../assets/img/icon/icon-link-gray-dark.svg");
+  background-size: contain;
+  /* todo: 真ん中に表示されていない気がする */
+  vertical-align: middle;
+  /* vertical-align: baseline; */
+}
+.footer .sns-list {
+  margin: 32px 8px 48px;
+}
+.footer .sns-list .sns-item {
+  display: inline-flex;
+  /* display: inline-block; */
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--gray-light);
+  border-radius: 25px;
+  align-items: center;
+  justify-content: center;
+}
+.footer .copy {
+  padding-top: 36px;
+  margin-bottom: 31.78px;
+  border-top: 1px solid var(--gray-light);
+  color: var(--gray-dark);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+}
+
+/* util */
+.hidden {
+  display: none;
+}
